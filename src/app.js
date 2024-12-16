@@ -20,7 +20,7 @@ window.onload = function() {
         list += `
         <li> ${a}${b}${c}.com</li>
         `;
-        // console.log(a + b + c + ".com");
+        console.log(a + b + c + ".com");
       });
     });
   });
