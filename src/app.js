@@ -18,24 +18,17 @@ window.onload = function() {
     adj.map(b => {
       noun.map(c => {
         if (c.endsWith("us")) {
-          list += `
-          <li> ${a}${b}${c.slice(0, -2)}.us</li>
-          `;
+          list += `<li> ${a}${b}${c.slice(0, -2)}.us</li>`;
           console.log(a + b + c.slice(0, -2) + ".us");
+
         } else if (c.endsWith("es")) {
-          list += `
-          <li> ${a}${b}${c.slice(0, -2)}.es</li>
-          `;
+          list += `<li> ${a}${b}${c.slice(0, -2)}.es</li>`;
           console.log(a + b + c.slice(0, -2) + ".es");
+
         } else {
-          list += `
-          <li> ${a}${b}${c}.com</li>
-          `;
+          list += `<li> ${a}${b}${c}.com</li>`;
           console.log(a + b + c + ".com");
         }
-        // list += `
-        // <li> ${a}${b}${c}.com</li>
-        // `;
       });
     });
   });
