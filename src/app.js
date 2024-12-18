@@ -1,33 +1,32 @@
 /* eslint-disable */
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+
 window.onload = function() {
-  //write your code here
   // console.log("Hello Rigo from the console!");
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["focus", "racoon", "heroes"];
+  let pronouns = ["the", "our"];
+  let adjectives = ["great", "big"];
+  let nouns = ["focus", "racoon", "heroes"];
 
   let list = "";
 
-  pronoun.map(a => {
-    adj.map(b => {
-      noun.map(c => {
-        if (c.endsWith("us")) {
-          list += `<li> ${a}${b}${c.slice(0, -2)}.us</li>`;
-          console.log(a + b + c.slice(0, -2) + ".us");
+  pronouns.map(pronoun => {
+    adjectives.map(adjective => {
+      nouns.map(noun => {
+        if (noun.endsWith("us")) {
+          list += `<li> ${pronoun}${adjective}${noun.slice(0, -2)}.us</li>`;
+          console.log(pronoun + adjective + noun.slice(0, -2) + ".us");
 
-        } else if (c.endsWith("es")) {
-          list += `<li> ${a}${b}${c.slice(0, -2)}.es</li>`;
-          console.log(a + b + c.slice(0, -2) + ".es");
+        } else if (noun.endsWith("es")) {
+          list += `<li> ${pronoun}${adjective}${noun.slice(0, -2)}.es</li>`;
+          console.log(pronoun + adjective + noun.slice(0, -2) + ".es");
 
         } else {
-          list += `<li> ${a}${b}${c}.com</li>`;
-          console.log(a + b + c + ".com");
+          list += `<li> ${pronoun}${adjective}${noun}.com</li>`;
+          console.log(pronoun + adjective + noun + ".com");
         }
       });
     });
